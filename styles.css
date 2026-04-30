@@ -50,8 +50,8 @@ h2 {
     color: #222;
 }
 
-/* Hero Section */
-#hero {
+/* About Section */
+#about {
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -61,23 +61,23 @@ h2 {
     flex-wrap: wrap-reverse; 
 }
 
-.hero-content {
+.about-content {
     flex: 1; 
     min-width: 300px;
 }
 
-#hero h1 {
+#about h1 {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
 }
 
-#hero h2 {
+#about h2 {
     font-size: 1.5rem;
     color: #555;
     margin-bottom: 1rem;
 }
 
-.hero-image {
+#about .about-image {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -85,7 +85,7 @@ h2 {
 }
 
 /* Image Styling */
-.hero-image img {
+#about .about-image img {
     max-width: 100%;
     width: 350px; 
     height: auto;
