@@ -9,8 +9,16 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Daniel Martinez</div>
-            <ul class="nav-links">
+            <a class="logo" href="#about" aria-label="Daniel Martinez home">
+                <span class="logo-full">Daniel Martinez</span>
+                <span class="logo-initials" aria-hidden="true">DM</span>
+            </a>
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="#about">Home</a></li>
                 <li><a href="#experience">Experiences</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -47,6 +55,28 @@
         </div>
         <p>&copy; 2026 Daniel Martinez. All rights reserved.</p>
     </footer>
+
+    <script>
+        const nav = document.querySelector('nav');
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        const setExpanded = (expanded) => {
+            navToggle.setAttribute('aria-expanded', String(expanded));
+        };
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('nav-open');
+            setExpanded(isOpen);
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-open');
+                setExpanded(false);
+            });
+        });
+    </script>
 
 </body>
 </html>
