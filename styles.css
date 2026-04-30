@@ -77,7 +77,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
-#about .about-image {
+.about-image {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -85,7 +85,7 @@ h2 {
 }
 
 /* Image Styling */
-#about .about-image img {
+.about-image img {
     max-width: 100%;
     width: 350px; 
     height: auto;
